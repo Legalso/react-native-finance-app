@@ -1,22 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, SafeAreaView } from "react-native";
+import { Text, SafeAreaView } from "react-native";
 import { Link } from "expo-router";
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Finance!</Text>
+    <SafeAreaView className="flex-1 items-center justify-center bg-white">
+      <Text className="text-3xl">Finance!</Text>
       <StatusBar style="auto" />
       <Link href='./profile' style={{color: 'blue'}}>Go to profile!</Link>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
